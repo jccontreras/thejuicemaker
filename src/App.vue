@@ -1,32 +1,56 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+  <div id="app" class="container-fluid">
+    <div class="row">
+      <div v-if="isOpen" class="col-2" style="max-width: 50%"><top/></div>
+      <div class="col" style="top: 20px">
+        <button v-if="isOpen" class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarToggleExternalContent"
+                aria-controls="navbarToggleExternalContent"
+                aria-expanded="false" aria-label="Toggle navigation" style="position: relative"
+                @click="openMenu">
+          <img src="@/assets/logo/closeicon.png" style="max-height: 30px; max-width: 30px">
+        </button>
+        <button v-else class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarToggleExternalContent"
+                aria-controls="navbarToggleExternalContent"
+                aria-expanded="false" aria-label="Toggle navigation" style="position: relative"
+                @click="openMenu">
+          <img src="@/assets/logo/openicon.png" style="max-height: 30px; max-width: 30px">
+        </button>
+        <router-view/>
+      </div>
     </div>
-    <router-view/>
+    <!--down/>
+    <modal-abeas-data/-->
   </div>
 </template>
 
+<script>
+import Top from '@/components/menu/Top.vue';
+import { mapMutations, mapState } from 'vuex';
+import * as constants from '@/store/constants';
+
+export default {
+  name: 'App',
+  components: {
+    Top,
+  },
+  computed: {
+    ...mapState({
+      isOpen: (state) => state.Menu.isopen,
+    }),
+  },
+  methods: {
+    ...mapMutations({
+      openMenu: constants.OPEN_MENU,
+      closeMenu: constants.CLOSE_MENU,
+    }),
+  },
+};
+</script>
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+.container-fluid {
+  background-color: #ffc700;
 }
 </style>
