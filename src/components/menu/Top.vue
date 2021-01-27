@@ -20,19 +20,6 @@
         </router-link>
       </li>
     </ul>
-    <div>
-      <a class="navbar-brand" href="https://www.facebook.com/thejuicemaker/" target="_blank">
-        <img src="@/assets/logo/Facebook.png" width="24" height="24" alt="">
-      </a>
-      <a class="navbar-brand"
-         href="https://www.instagram.com/thejuicemakercolombia/?igshid=5sime2d6pn1b"
-         target="_blank">
-        <img src="@/assets/logo/Instagram.png" width="24" height="24" alt="">
-      </a>
-      <a class="navbar-brand" href="https://www.youtube.com/channel/UCmgQAIr3-WOzWg8gABL__QQ" target="_blank">
-        <img src="@/assets/logo/Youtube.png" width="24" height="24" alt="">
-      </a>
-    </div>
   </div>
 </template>
 

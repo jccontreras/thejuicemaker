@@ -1,7 +1,24 @@
 <template>
   <div id="app" class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light colorttop">
+      <div class="col align-self-end">
+        <a class="navbar-brand" href="https://www.facebook.com/thejuicemaker/" target="_blank">
+          <img src="@/assets/logo/Facebook.png" width="24" height="24" alt="">
+        </a>
+        <a class="navbar-brand"
+           href="https://www.instagram.com/thejuicemakercolombia/?igshid=5sime2d6pn1b"
+           target="_blank">
+          <img src="@/assets/logo/Instagram.png" width="24" height="24" alt="">
+        </a>
+        <a class="navbar-brand" href="https://www.youtube.com/channel/UCmgQAIr3-WOzWg8gABL__QQ" target="_blank">
+          <img src="@/assets/logo/Youtube.png" width="24" height="24" alt="">
+        </a>
+      </div>
+    </nav>
     <div class="row">
-      <div v-if="isOpen" id="top" class="col-2" style="max-width: 50%"><top/></div>
+      <div id="top" class="col-2" style="max-width: 50%">
+        <top/>
+      </div>
       <div class="col" style="top: 20px">
         <button v-if="isclose" class="navbar-toggler" type="button" data-toggle="collapse"
                 data-target="#navbarToggleExternalContent"
@@ -20,49 +37,48 @@
         <router-view/>
       </div>
     </div>
-    <!--down/>
-    <modal-abeas-data/-->
+    <down/>
+    <modal-animacion/>
+    <!--modal-abeas-data/-->
   </div>
 </template>
 
 <script>
 import Top from '@/components/menu/Top.vue';
-import { mapMutations, mapState } from 'vuex';
-import * as constants from '@/store/constants';
+import Down from '@/components/footer/Down.vue';
+import ModalAnimacion from '@/components/abeasdata/ModalAnimacion.vue';
 
-const $ = require('jquery');
-
-window.$ = $;
+const jq = require('jquery');
 
 export default {
   name: 'App',
   components: {
     Top,
+    Down,
+    ModalAnimacion,
   },
   data() {
     return {
       isclose: false,
     };
   },
-  computed: {
-    ...mapState({
-      isOpen: (state) => state.Menu.isopen,
-    }),
-  },
   methods: {
-    ...mapMutations({
-      openMenu: constants.OPEN_MENU,
-      closeMenu: constants.CLOSE_MENU,
-    }),
     openMenuJQ() {
       if (this.isclose === true) {
-        $('#top').show(300);
+        jq('#top')
+          .show(500);
         this.isclose = false;
       } else {
-        $('#top').hide(300);
+        jq('#top')
+          .hide(500);
         this.isclose = true;
       }
     },
+  },
+  mounted() {
+    // eslint-disable-next-line no-undef
+    $('#staticBackdrop')
+      .modal('show');
   },
 };
 </script>
