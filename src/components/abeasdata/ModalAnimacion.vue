@@ -2,7 +2,7 @@
   <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false"
        tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content colorbody">
+      <div class="modal-content colormodal">
         <div class="modal-body">
           <div class="embed-responsive embed-responsive-16by9">
             <video id="anima" controls autoplay>
@@ -44,7 +44,7 @@ export default {
 </script>
 
 <style lang="scss">
-.colorbody {
+.colormodal {
   background-color: #ffd800;
   color: #ffd800;
 }

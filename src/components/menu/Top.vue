@@ -1,7 +1,7 @@
 <template>
   <div class="licolor">
     <router-link class="nav-link" :to="{name: 'home'}">
-      <img src="@/assets/logo/logotjm.png" style="max-height: 100px; max-width: 180px">
+      <img src="@/assets/logo/logotjm.png" style="max-height: 100px; max-width: 200px">
     </router-link>
     <ul class="list-group list-group-flush">
       <li class="list-group-item licolor">

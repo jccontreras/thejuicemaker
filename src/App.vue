@@ -1,25 +1,23 @@
 <template>
   <div id="app" class="container-fluid">
-    <nav class="navbar navbar-expand-lg navbar-light colorttop">
-      <div class="col align-self-end">
-        <a class="navbar-brand" href="https://www.facebook.com/thejuicemaker/" target="_blank">
-          <img src="@/assets/logo/Facebook.png" width="24" height="24" alt="">
-        </a>
-        <a class="navbar-brand"
-           href="https://www.instagram.com/thejuicemakercolombia/?igshid=5sime2d6pn1b"
-           target="_blank">
-          <img src="@/assets/logo/Instagram.png" width="24" height="24" alt="">
-        </a>
-        <a class="navbar-brand" href="https://www.youtube.com/channel/UCmgQAIr3-WOzWg8gABL__QQ" target="_blank">
-          <img src="@/assets/logo/Youtube.png" width="24" height="24" alt="">
-        </a>
-      </div>
-    </nav>
+    <div class="col align-self-end" style="text-align: end">
+      <a class="navbar-brand" href="https://www.facebook.com/thejuicemaker/" target="_blank">
+        <img src="@/assets/logo/Facebook.png" width="24" height="24" alt="">
+      </a>
+      <a class="navbar-brand"
+         href="https://www.instagram.com/thejuicemakercolombia/?igshid=5sime2d6pn1b"
+         target="_blank">
+        <img src="@/assets/logo/Instagram.png" width="24" height="24" alt="">
+      </a>
+      <a class="navbar-brand" href="https://www.youtube.com/channel/UCmgQAIr3-WOzWg8gABL__QQ" target="_blank">
+        <img src="@/assets/logo/Youtube.png" width="24" height="24" alt="">
+      </a>
+    </div>
     <div class="row">
       <div id="top" class="col-2" style="max-width: 50%">
         <top/>
       </div>
-      <div class="col" style="top: 20px">
+      <div class="col" style="top: 10px">
         <button v-if="isclose" class="navbar-toggler" type="button" data-toggle="collapse"
                 data-target="#navbarToggleExternalContent"
                 aria-controls="navbarToggleExternalContent"
