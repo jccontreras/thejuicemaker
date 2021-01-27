@@ -1,11 +1,11 @@
 <template>
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-md">
         <content1-home/>
       </div>
       <div class="col-md">
-        <div class="card colorbody" style="width: 25rem; border-style: none">
+        <div class="card colorbody" style="max-width: 100%; border-style: none">
           <div class="card-body colorbody">
             <h1 class="card-title">Nuestra Filosof&iacute;a</h1>
             <h3 class="card-text" style="text-align: justify">
