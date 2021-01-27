@@ -5,12 +5,12 @@
     </router-link>
     <ul class="list-group list-group-flush">
       <li class="list-group-item licolor">
-        <router-link class="nav-link linkcolor" :to="{name: 'about'}">
+        <router-link class="nav-link linkcolor" :to="{name: 'artists'}">
           Artistas
         </router-link>
       </li>
       <li class="list-group-item licolor">
-        <router-link class="nav-link linkcolor" :to="{name: 'home'}">
+        <router-link class="nav-link linkcolor" :to="{name: 'team'}">
           Equipo
         </router-link>
       </li>
