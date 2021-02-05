@@ -7,14 +7,15 @@
       <div class="col-md">
         <div class="card colorbody" style="max-width: 100%; border-style: none">
           <div class="card-body colorbody">
-            <h1 class="card-title">Nuestra Filosof&iacute;a</h1>
+            <img src="@/assets/img/aboutus.png" style="max-width: 100%">
+            <!--h1 class="card-title">Nuestra Filosof&iacute;a</h1>
             <h3 class="card-text" style="text-align: justify">
               Nos dedicamos a la creación, producción y grabación de música, su comercialización
               y distribución. Producimos artistas de géneros musicales como hip hop, trap, afro-
               beat, fusión entre otros.
               Cubrimos otros campos como la realización de videoclips, imagen, contenido, CD,
               programación de conciertos, entre otros.
-            </h3>
+            </h3-->
           </div>
         </div>
       </div>

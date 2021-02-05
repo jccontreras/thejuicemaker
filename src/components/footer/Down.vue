@@ -1,14 +1,6 @@
 <template>
   <footer class="page-footer extend font-small blue pt-4 container-fluid">
-    <p>
-      DJ Caleto
-    </p>
-    <p>
-      Cel: 318 320 29 52
-    </p>
-    <p>
-      @: thejuicemakercolombia@gmail.com
-    </p>
+    <img src="@/assets/img/footer.png" style="max-width: 100%">
   </footer>
 </template>
 
@@ -20,6 +12,6 @@ export default {
 
 <style>
 .container-fluid {
-  background-color: #ffc700;
+  background-color: #000000;
 }
 </style>
